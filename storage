@@ -1,0 +1,33 @@
+STORAGE CLASSES
+# AUTO & STATIC#
+#include <stdio.h>
+void fun (void){
+    auto int a=1;
+    static int b=1;
+    a++;
+    b++;
+    printf("%d %d\n",a,b);
+}
+void main()
+{
+ fun(); 
+ fun();
+ fun();
+}
+#INTIAL VALUES OF AUTO,REGISTER&STATIC#
+#include <stdio.h>
+void main(){
+    auto int a;
+    register int b;
+    static int c;
+    printf("%d %d %d %d\n",a,b,c);
+}
+
+#AUTO & REGISTER#
+#include<stdio.h>
+void main(){
+    int a=20;
+    register int b=70;
+    printf("%d %d",a,b);
+    printf("%u %u",&a,&b);//address of register variable b is requested
+}
